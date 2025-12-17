@@ -1,1 +1,105 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
+body {
+  margin: 0;
+  background: #FFF7FA;
+}
+
+/* SPLASH */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #FADADD, #E8C1EC);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 3s;
+}
+
+#splash h1 {
+  font-size: 3rem;
+}
+
+#splash p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* MENU */
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#menuOptions {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.menu:hover #menuOptions {
+  display: flex;
+}
+
+/* HABITS */
+#habitList {
+  padding: 20px;
+}
+
+.habit {
+  background: var(--bg);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.habit.flipped {
+  transform: rotateY(180deg);
+}
+
+.buttons button {
+  margin: 5px;
+}
+
+/* ADD BUTTON */
+#addHabitBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  border: none;
+  background: #F6C1CC;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

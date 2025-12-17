@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habit Tracker</title>
 
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#F6C1CC">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- SPLASH -->
+<div id="splash">
+  <h1 id="appName">Habitly</h1>
+  <p id="quote"></p>
+</div>
+
+<!-- MENU -->
+<div class="menu">
+  <span id="menuBtn">⋮</span>
+  <div id="menuOptions">
+    <button onclick="showProgress()">Progress</button>
+    <button onclick="resetData()">Reset Data</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden">
+  <h2 id="today"></h2>
+
+  <div id="habitList"></div>
+
+  <button id="addHabitBtn">+</button>
+
+  <div id="progressModal" class="modal hidden">
+    <canvas id="progressChart"></canvas>
+    <button onclick="closeProgress()">Close</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
